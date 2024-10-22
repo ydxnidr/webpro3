@@ -8,5 +8,4 @@
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>css/style.css">
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>src/inter/web/inter.css">
 </head>
-<body class="bg-gradient-to-r from-blue-500 to-cyan-500">
-    <p class="font-bold text-lg text-black">halo</p>
+<body class="bg-gradient-to-r from-blue-500 to-cyan-500 h-screen flex items-center justify-center">
