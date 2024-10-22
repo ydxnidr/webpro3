@@ -5,7 +5,12 @@ module.exports = {
         './application/views/**/*.html'
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                body: ['Inter', 'sans-serif'],
+                sans: ['Inter', 'sans-serif'],
+            }
+        },
     },
     plugins: [],
 }
