@@ -23,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://webpro3.test/';
+$config['base_url'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']    = 'indonesian';
+$config['language']    = 'english';
 
 /*
 |--------------------------------------------------------------------------
@@ -497,7 +497,7 @@ $config['compress_output'] = FALSE;
 | helper' page of the user guide for information regarding date handling.
 |
 */
-$config['time_reference'] = 'Asia/Jakarta';
+$config['time_reference'] = 'local';
 
 /*
 |--------------------------------------------------------------------------
