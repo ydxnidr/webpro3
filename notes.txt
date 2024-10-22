@@ -1,0 +1,78 @@
+Untuk menginstal dan mengonfigurasi Tailwind CSS di CodeIgniter 3 (CI3) menggunakan metode CLI, ikuti langkah-langkah berikut:
+
+1. *Pastikan Node.js dan npm Terinstal:*
+   - Sebelum memulai, pastikan Anda telah menginstal Node.js dan npm di sistem Anda. Anda dapat memeriksa dengan menjalankan perintah:
+     bash
+     node -v
+     npm -v
+     
+
+2. *Inisialisasi Proyek Node:*
+   - Masuk ke direktori proyek CodeIgniter Anda dan inisialisasi proyek Node baru dengan menjalankan perintah:
+     bash
+     npm init -y
+     
+
+3. *Instal Tailwind CSS:*
+   - Instal Tailwind CSS dan alat-alat pendukungnya dengan perintah:
+     bash
+     npm install tailwindcss postcss autoprefixer
+     
+
+4. *Buat File Konfigurasi Tailwind:*
+   - Buat file konfigurasi Tailwind dan PostCSS dengan perintah:
+     bash
+     npx tailwindcss init
+     
+
+5. *Konfigurasi File Tailwind:*
+   - Buka file tailwind.config.js dan sesuaikan jalur konten untuk mencakup file view CI3 Anda. Misalnya:
+     javascript
+     module.exports = {
+       content: [
+         './application/views/**/*.php',
+         './application/views/**/*.html',
+       ],
+       theme: {
+         extend: {},
+       },
+       plugins: [],
+     }
+     
+
+6. *Buat Berkas CSS:*
+   - Buat folder assets di root proyek Anda dan buat file CSS misalnya src/tailwind.css dengan konten berikut:
+     css
+     @tailwind base;
+     @tailwind components;
+     @tailwind utilities;
+     
+
+7. *Konfigurasi PostCSS:*
+   - Buat file postcss.config.js di root proyek dengan isi berikut:
+     javascript
+     module.exports = {
+       plugins: {
+         tailwindcss: {},
+         autoprefixer: {},
+       },
+     }
+     
+
+8. *Kompilasi Tailwind CSS:*
+   - Kompilasi Tailwind CSS dengan menjalankan perintah:
+     bash
+     npx tailwindcss -i ./assets/src/tailwind.css -o ./assets/css/style.css --watch
+     
+   - Perintah ini akan mengamati perubahan pada file Tailwind dan mengompilasi hasilnya ke assets/css/style.css.
+
+9. *Link ke File CSS di View:*
+   - Tambahkan link ke file CSS yang dihasilkan di bagian <head> file view CodeIgniter Anda, seperti:
+     html
+     <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
+     
+
+10. *Mulai Menggunakan Tailwind:*
+    - Kini Anda dapat menggunakan kelas-kelas Tailwind CSS di dalam view CI3 Anda.
+
+Itulah langkah-langkah untuk menginstal dan mengkonfigurasi Tailwind CSS di CodeIgniter 3 menggunakan metode CLI. Jika Anda mengalami kendala, pastikan setiap langkah dilakukan dengan benar dan periksa kembali konfigurasi serta perintah yang digunakan.
