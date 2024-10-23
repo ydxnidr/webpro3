@@ -6,6 +6,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            backgroundImage: {
+                'pattern-blue': "url('/assets/img/patterns/pattern-blue.png')"
+            },
             fontFamily: {
                 body: ['Inter', 'sans-serif'],
                 sans: ['Inter', 'sans-serif'],
