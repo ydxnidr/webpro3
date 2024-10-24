@@ -2,7 +2,8 @@
 module.exports = {
     content: [
         './application/views/**/*.php',
-        './application/views/**/*.html'
+        './application/views/**/*.html',
+        'node_modules/preline/dist/*.js'
     ],
     theme: {
         extend: {
@@ -15,6 +16,8 @@ module.exports = {
             }
         },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('preline/plugin')
+    ]
 }
-
