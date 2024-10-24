@@ -2,12 +2,3 @@
     <i class="ki-outline ki-arrows-circle animate-spin bg-gradient-to-r from-blue-500 to-cyan-500 inline-block text-transparent bg-clip-text text-[35px]"></i>
     <span class="text-[15px] text-semibold text-gray-400 mt-[5px]">Memuat...</span>
 </div>
-<script>
-    document.getElementById("loading").style.opacity = "1";
-    setTimeout(() => {
-        document.getElementById("loading").style.opacity = "0";
-        setTimeout(() => {
-            document.getElementById("loading").classList.add("hidden");
-        }, 300);
-    }, 150);
-</script>
