@@ -1,11 +1,21 @@
-//Page Loader
-document.getElementById("loading").style.opacity = "1";
-setTimeout(() => {
-    document.getElementById("loading").style.opacity = "0";
+// Page Loader
+const loader = document.getElementById("loading");
+
+function showLoader() {
+    loader.style.opacity = "1";
+}
+
+function hideLoader() {
+    loader.style.opacity = "0";
     setTimeout(() => {
-        document.getElementById("loading").classList.add("hidden");
+        loader.classList.add("hidden");
     }, 300);
-}, 150);
+}
+
+setTimeout(() => {
+    showLoader();
+    setTimeout(hideLoader, 150);
+}, 0);
 
 //alert
 var pesan = document.getElementById('alert');
