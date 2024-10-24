@@ -17,26 +17,22 @@ setTimeout(() => {
     setTimeout(hideLoader, 150);
 }, 0);
 
-// Alert fade-out functionality
+// Alert
 var pesan = document.getElementById('alert');
-
-// Function to fade out the alert
 function fadeOut(element) {
-    var opacity = 1; // Start with full opacity
+    var opacity = 1;
     var interval = setInterval(function() {
         if (opacity <= 0) {
             clearInterval(interval);
-            element.style.display = 'none'; // Hide the element
+            element.style.display = 'none';
         } else {
-            opacity -= 0.1; // Decrease opacity
-            element.style.opacity = opacity; // Update opacity
+            opacity -= 0.1;
+            element.style.opacity = opacity; 
         }
-    }, 100); // Adjust the interval timing for smoother transition
+    }, 100); 
 }
-
-// Show alert after 3 seconds
 setTimeout(function() {
-    pesan.style.opacity = 1; // Ensure the alert is visible
-    fadeOut(pesan); // Start the fade-out effect
+    pesan.style.opacity = 1;
+    fadeOut(pesan);
 }, 3000);
 
